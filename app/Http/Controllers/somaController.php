@@ -84,7 +84,7 @@ class somaController extends Controller
     public function soma($num1, $num2)
     {
         $soma = $num1+$num2;
-        logger()->info('soma feita');
+        logger()->info('Soma feita');
 
         return ($soma);
     }
