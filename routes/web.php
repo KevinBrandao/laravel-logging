@@ -28,3 +28,5 @@ Route::get('/soma/{num1}/{num2}',[somaController::class, 'soma']);
 Route::get('/sub/{num1}/{num2}' ,[somaController::class, 'sub']);
 
 Route::get('/div/{num1}/{num2}', [somaController::class, 'div']);
+
+Route::get('/mult/{num1}/{num2}', [somaController::class, 'mult']);
