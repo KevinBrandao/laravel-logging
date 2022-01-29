@@ -83,7 +83,7 @@ class somaController extends Controller
     }
     public function soma($num1, $num2)
     {
-        $soma = $num1+$num2;
+        $soma = $num1 + $num2;
         logger()->info('Soma feita');
 
         return ($soma);
@@ -91,7 +91,17 @@ class somaController extends Controller
     public function sub($num1, $num2)
     {
         $sub = $num1 - $num2;
-        logger()->debug('Sub feita',['num1' => $num1, 'num2' => $num2, 'sub' => $sub]); 
+        logger()->debug('Sub feita', ['num1' => $num1, 'num2' => $num2, 'sub' => $sub]);
         return ($sub);
+    }
+    public function div($num1, $num2)
+    {
+        if ($num2 == 0) {
+            logger()->error('Divisor zero!');
+            return ('Divisor zero!');
+        }
+        $div = $num1 / $num2;
+        logger()->info('Div feita');
+        return ($div);
     }
 }
